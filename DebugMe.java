@@ -1,6 +1,8 @@
 //This class contains a number of syntax and semantic errors.
 //Your job is to find them all.
 
+import java.util.Arrays;
+
 public Class DebugMe{
 
 	public static void main(String args[]){
@@ -22,12 +24,12 @@ public Class DebugMe{
 
 		int count;
 
-		count = Integer.parseInt(args);
-
+		count = Integer.parseInt(Arrays.toString(args));
+		int sum = 0;
+		int i;
 		for (i = 1 ; i <= count ; i++);
 		{
-			int sum = 0;
-			int i = 0;
+
 			sum += i - 1;
 			System.out.println("The sum of the first " + i + " numbers is " + sum + ".");
 		}
@@ -86,4 +88,5 @@ public Class DebugMe{
 		}
 
 	}
-}
+
+	}

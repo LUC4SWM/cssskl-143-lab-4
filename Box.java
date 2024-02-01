@@ -2,18 +2,18 @@
 //The variable grade is a measure of the thickness of the cardboard
 //used to construct the box.
 
-public class Box2{
+public class Box{
 
 	private int width, depth;
 	private static int height, grade;
 
 	//class constructor
-	public void Box2(int width, int height, int depth, int grade)
+	public void Box(int width, int height, int depth, int grade)
 	{
-		width = width;
-		height = height;
-		depth = depth;
-		grade = grade;
+		this.width = width;
+		Box.height = height;
+		this.depth = depth;
+		Box.grade = grade;
 	}
 
 	//Two boxes should be considered equivalent if their volume is
@@ -21,14 +21,14 @@ public class Box2{
 	//returns true if they are equivalent and false otherwise
 	public boolean equals(Box b)
 	{
-		return this.getVolume() == b.getVolume() && this.getGrade() = b.getGrade();
+		return ((this.getVolume() == b.getVolume()) && (this.getGrade() == b.getGrade()));
 	}
 
 	//If this Box is larger than the argument Box b
 	//then return this Box - otherwise return b
 	public Box larger(Box b)
 	{
-		if(b.getVolume() > this.getVolume)
+		if(b.getVolume() > this.getVolume())
 			return this;
 		return b;
 	}
@@ -36,7 +36,7 @@ public class Box2{
 	//Simple getter methods
 	public int getGrade()
 	{
-		return g;
+		return grade;
 	}
 
 	public int getVolume()
