@@ -21,9 +21,8 @@ class Account
 // Instance methods
 	/** Deposits 'amount' into the account
 	 */
-	public void deposit(int amount)
-	{
-		balance = balance + amount;
+	public void deposit(int amount){
+		balance += amount;
 	}
 
 	/** Withdraws 'amount' from the account.
@@ -31,14 +30,15 @@ class Account
 	 *	This method should be re-written so that there is not a possibility of
 	 *	having a negative balance.
 	 */
-	public void withdraw(int amount)
-	{
-		balance = balance - amount;
+	public void withdraw(int amount){
+		if (balance >= amount) {
+			balance -= amount;
+		}
 	}
 
 	/* Returns the balance of the Account
 	 */
-	public int getBalance()
+	public double getBalance()
 	{
 		return balance;
 	}

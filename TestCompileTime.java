@@ -1,15 +1,15 @@
-public class TestCompiletime
+public class TestCompileTime
 {
 
-	public TestCompiletime()
+	public TestCompileTime()
 	{}
 
-	public static void main(String args[])
+	public static void main(String[] args)
 	{
 		if(Debug.DEBUG)
   		{
 			System.err.println("Debug is turned on");
-			TestCompiletime t = new TestCompiletime();
+			TestCompileTime t = new TestCompileTime();
 	        int[] numbers = new int[4];
 	        for (int i=1; i<5; i++)
 	        {

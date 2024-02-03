@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class TestFinally{
+public class TestFinally{ /*
     public static void main(String[] args){
         FileInputStream in1 = null;
         FileInputStream in2 = null;
@@ -38,7 +38,7 @@ public class TestFinally{
 
 
         //5. Close the finally block here.
-    }
+    } */
 }
 
 

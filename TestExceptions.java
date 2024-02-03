@@ -1,7 +1,7 @@
 
 import java.io.*;
 public class TestExceptions{
-    public static void main(String[] args){
+   /* public static void main(String[] args){
 
         //Open the Input file
         File inputFile = new File("Sample.jpg");
@@ -21,7 +21,7 @@ public class TestExceptions{
         //Close the files
         in1.close();
         out1.close();
-    }
+    } */
 }
 
 
