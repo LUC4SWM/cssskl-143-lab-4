@@ -3,9 +3,9 @@
 
 import java.util.Arrays;
 
-public Class DebugMe{
+public class DebugMe{
 
-	public static void main(String args[]){
+	public static void main(String[] args){
 
 		printSums(args);
 		compareBoxes();
@@ -20,16 +20,15 @@ public Class DebugMe{
 	//  The sum of the first 3 numbers is 6.
 
 	public static void printSums(String[] args){
-	{
+
 
 		int count;
 
 		count = Integer.parseInt(Arrays.toString(args));
 		int sum = 0;
 		int i;
-		for (i = 1 ; i <= count ; i++);
+		for (i = 1 ; i <= count ; i++)
 		{
-
 			sum += i - 1;
 			System.out.println("The sum of the first " + i + " numbers is " + sum + ".");
 		}

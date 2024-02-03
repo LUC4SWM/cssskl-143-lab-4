@@ -8,7 +8,7 @@ public class Box{
 	private static int height, grade;
 
 	//class constructor
-	public void Box(int width, int height, int depth, int grade)
+	public  Box(int width, int height, int depth, int grade)
 	{
 		this.width = width;
 		Box.height = height;
