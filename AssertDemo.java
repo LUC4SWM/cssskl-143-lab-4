@@ -9,6 +9,8 @@
  * Author: Rob Nash
  */
 
+import java.awt.*;
+import java.awt.geom.Point2D;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -19,15 +21,15 @@ public class AssertDemo {
 	 */
 	public static void main(String[] args) {
 		assert(true);
-		assert(false);
+		//assert(false);
 		
-		warmUpAsserts();
+		//warmUpAsserts();
 		
-		assertWithPrimitives();
+		//assertWithPrimitives();
 		
 		assertWithObjects();
 		
-		homeworkRelatedAsserts();
+		//homeworkRelatedAsserts();
 	}
 
 	/*
@@ -43,6 +45,11 @@ public class AssertDemo {
 			assert(null == null);	  //could this ever be false?
 			assert(true == true);	  //a bad day indeed if this could be false
 			//TODO: craft two more asserts and place them here.  If they're false, they'll crash the program.
+			double b = 12.1212;
+			assert(b != 12);
+
+			char c = '$';
+			assert(c != '@');
 	}
 
 	/*
@@ -63,8 +70,10 @@ public class AssertDemo {
 	
 		//assert that all ArrayLists start empty
 		ArrayList<String> emptyList = new ArrayList<String>();
-		assert(emptyList.size() == 0);
+		assert(emptyList.isEmpty());
 		//TODO: build two more asserts that use primitives and relational operators here
+		assert(num != denom); //asserts that the fraction isn't just equal to 1
+		assert(num != 0); //asserts that the fraction isn't just equal to 0;
 	}
 	
 	/*
@@ -80,9 +89,19 @@ public class AssertDemo {
 		//TODO: make a few objects from any previous lab and test them with assert
 		//example: make two Point objects at the origin and assert they are equal
 		//assert(p1.equals(p2);  //example
+		Shape bluePrint = new Shape(3, 6, Color.red);
+		Shape copy = new Shape(bluePrint);
+		Shape duplicate = bluePrint;
+		assert(!copy.equals(bluePrint));
+		assert(bluePrint.equals(duplicate));
+
+		/* 4.5 Questions:
+		--- "this" maps the address of the object that the function is to be operated on.
+		--- "input" (which is the "ad" object in this case) maps the address of the object in the parameter.
+		--- The "this" keyword is used to refer to the current object, or the one that's gotten the function call to it.
+		*/
+
 	}
-
-
 	/*
 	 * This function compares the address at "this" to the address of the object handed 
 	 * into the function.
@@ -106,5 +125,9 @@ public class AssertDemo {
 		int cents = 0;
 		assert( cents >= 0 && cents <=99);  //another class invariant is written as an assert here.
 		//TODO: craft 2 more asserts that you could use with any assignment
+		Object draftDueDate = new Object();
+		Object submissionDueDate = new Object();
+		assert(submissionDueDate != null);
+		assert(draftDueDate != submissionDueDate);
 	}
 }

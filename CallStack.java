@@ -2,16 +2,21 @@ public class CallStack{
 
   // Called by func1()
   void func2 (){
-	 System.out.println("In func2 method");
-   	 int a = 0;
-   	 int b;
-   	 b = 10 / a;
+         System.out.println("In func2 method");
+         int a = 0;
+         int b;
+         b = 10 / a;
+
    }
 
    //Called by Main
    void func1(){
 	  System.out.println("In func1 method");
-	  this.func2 ();
+	  try {
+          this.func2();
+      } catch (Exception e) {
+          System.out.println("[Call to 'func2' was stopped because you can't divide by zero.]");
+      }
 	  System.out.println("Back in func1 method");
 
    }
